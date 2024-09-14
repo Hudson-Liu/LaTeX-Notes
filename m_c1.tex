@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[left=3cm,right=3cm,top=0cm,bottom=2cm]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{mathtools}
+
+\setlength{\parindent}{0mm}
+\DeclarePairedDelimiter{\opair}{\langle}{\rangle}
+
+\title{Multivar. Class Notes}
+\author{Hudson Liu}
+\date{Sep. 9, 2024}
+
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+Finding a Dot Product:
+
+\[u=\opair{5, -1, 0}\]
+\[v=\opair{-2, -3, 4}\]
+\[u * v = 5(-2) + (-1)(-3) + 0(4)\]
+
+Three Types of Scalar Multiplication:
+\begin{itemize}
+  \item Scalar Multiplication
+  \item Dot Product
+  \item Cross Product (Non-Commutitative)
+\end{itemize}
+
+Properties of Dot Product:
+\begin{itemize}
+  \item Communitative
+  \item Distributative
+  \item NOT Associative
+  \item Associative w/ Scalar Multiplication
+  \item Multiplying by a Zero-Vector Results in Zero-Vector
+  \item $v * v = \norm{v}^2$
+\end{itemize}
+
+Dot product is very "cooperative"; abides by the properties that we want.
+
+\[
+  \cos(\theta)=\frac{ u*v }{ \norm{v} \norm{w} }
+\]
+
+Note that $\norm{u}$ and $\norm{v}$ will always be $>$ 0. Thus, $\cos(\theta)$ btwn. two vector will always have the same sign as u * v.
+
+\[
+  [0, \frac{\pi}{2}], \text{cos is positive.}
+\]
+\[
+  [\frac{\pi}{2}, \pi], \text{cos is negative.}
+\]
+
+Thus:
+\begin{itemize}
+  \item Positive dot-product $\rightarrow$ Acute angle
+  \item Zero dot-product $\rightarrow$ Right angle
+  \item Negative dot-product $\rightarrow$ Obtuse angle
+\end{itemize}
+
+Orthogonal: Essentially just "right angle."
+\begin{itemize}
+  \item Perpendicular, Orthogonal, Normal; All Synonyms
+  \item Orthogonal is used mostly with vectors.
+\end{itemize}
+
+\[
+  u * v = \norm{u} \norm{v} \cos(\theta)
+\]
+
+Projections: 
+
+Two vectors, u \& v. Project u onto v; form a right angle and find the perpendicular "shadow" of u on v. Think abt it like breaking u up into components that are perpendicular and parallel to some other vector v. Also referred to as vector decomposition.
+
+$ (proj_v)(u) $
+
+we'll name the other component the "orthogonal" component\dots
+\[ (orth_v)(u) \]
+\[ (proj_v)(u) = (\frac{u \cdot v}{\norm{v}^2}) * v \]
+
+To find the orthogonal projection, just subtract the projection from u
+
+\end{document}
