@@ -4,7 +4,11 @@
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{mathtools}
+\usepackage{lipsum}
 \usepackage{multirow}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
 
 \setlength{\parindent}{0mm}
 
@@ -14,7 +18,39 @@
 
 \begin{document}
 \maketitle
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+\section*{Hola}
+jweioafjoiejofaje
 
+\tdplotsetmaincoords{70}{110}
+\begin{tikzpicture}[tdplot_main_coords]
+    \draw[thick,->] (0,0,0) -- (5,0,0) node[anchor=north east]{$x$};
+    \draw[thick,->] (0,0,0) -- (0,5,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+
+    \draw[thin,->,blue] (0,0.5,0) -- (2,0.5,0);
+    \draw[thin,->,blue] (4,0.5,0) -- (5,0.5,0);
+    \draw[thin,->,blue] (0,1,0) -- (2,1,0);
+    \draw[thin,->,blue] (4,1,0) -- (5,1,0);
+    \draw[thin,->,blue] (0,1.5,0) -- (5,1.5,0);
+    \draw[thin,->,blue] (0,2,0) -- (5,2,0);
+    \draw[thin,->,blue] (0,2.5,0) -- (5,2.5,0);
+    \draw[thin,->,blue] (0,3,0) -- (5,3,0);
+    \pgfmathsetmacro{\a}{4}
+    \pgfmathsetmacro{\b}{0.1}
+    \pgfmathsetmacro{\c}{0}
+
+    \pgfmathsetmacro{\x}{2}
+    \pgfmathsetmacro{\y}{0.5}
+    \pgfmathsetmacro{\z}{1.1}
+    \path (\a,\b,\y) coordinate (A) (\x,\b,\y) coordinate (B) (\x,\b,\c) coordinate (C) (\a,\b,\c)
+    coordinate (D) (\a,\z,\y) coordinate (E) (\x,\z,\y) coordinate (F) (\x,\z,\c) coordinate (G)
+    (\a,\z,\c) coordinate (H);
+    \draw (A)--(B) (G)--(F)--(B) (D)--(H) (A)--(E)--(F)--(G)--(H)--(E) (A)--(D);
+    \draw [dashed,black] (B)--(C) (C)--(G) (C)--(D);
+\end{tikzpicture}
 \def\arraystretch{1.2}%
 \begin{center}
     \begin{tabular}{c c}
