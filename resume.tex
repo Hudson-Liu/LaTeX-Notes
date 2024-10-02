@@ -1,0 +1,195 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Hudson Liu} \\ \vspace{1pt}
+\small 443-882-5497 $|$ \href{mailto:hudsonliu0@gmail.com}{\underline{hudsonliu0@gmail.com}} $|$ 
+    \href{https://hudson.is-a.dev}{\underline{hudson.is-a.dev}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Gilman School}{Baltimore, MD}
+      {High School Diploma}{Aug. 2021 -- Jun. 2025}
+    \resumeSubheading
+      {Johns Hopkins University}{Baltimore, MD}
+      {Visiting Student, Future Scholars}{Aug. 2024 -- Jun. 2025}
+    \resumeSubheading
+      {Commuity College of Baltimore County}{Baltimore, MD}
+      {Associate's in Computer Science}{Aug. 2020 -- Jun. 2025}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Research Intern}{June 2020 -- Present}
+      {Johns Hopkins Hospital}{College Station, TX}
+      \resumeItemListStart
+        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
+        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
+        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {}{June 2020 -- Present}
+      {Johns Hopkins Hospital}{College Station, TX}
+      \resumeItemListStart
+        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
+        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
+        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{RCM Layer} $|$ \emph{Python, TensorFlow, Keras, Matplotlib, Sphinx}}{June 2020 -- Present}
+          \resumeItemListStart
+            \resumeItem{Created a novel architecture, RCM (Recurrent Complete Multidigraph), outperforming dense layers}
+            \resumeItem{Developed a Keras implementation of RCMs as a layer}
+            \resumeItem{Wrote script for generating 10-Gigapixel diagram of trained RCM for MNIST}
+            \resumeItem{Designed a 3D Model of RCM for K6 in Fusion 360}
+            \resumeItem{Auto-generating documentation via ReadTheDocs & Sphinx, hosted on GitHub Pages}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{++C Esolang (PostC)} $|$ \emph{C++}}{May 2018 -- May 2020}
+          \resumeItemListStart
+             \resumeItem{Created a new esolang, ++C: a postfix-based esolang based on C++ syntax}
+            \resumeItem{Wrote ++C article on esolang wiki}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Activities/Extracurriculars}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{JV Cross Country/JV Indoor Track/JV Outdoor Tracek}}{June 2020 -- Present}
+      \resumeProjectHeading
+        {\textbf{2nd Chair Alto Saxohpone, Peabody Wind Orchestra}}{May 2018 -- May 2020}
+    \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, C/C++, HTML/CSS, Lua} \\
+     \textbf{Developer Tools}{: Git, Anaconda, Docker, Neovim, Arch Linux} \\
+     \textbf{Libraries}{: Keras, PyTorch, TensorFlow, Pandas, NumPy, Matplotlib, DearPyGUI}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

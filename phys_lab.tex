@@ -26,18 +26,26 @@ jweioafjoiejofaje
 
 \tdplotsetmaincoords{70}{110}
 \begin{tikzpicture}[tdplot_main_coords]
-    \draw[thick,->] (0,0,0) -- (5,0,0) node[anchor=north east]{$x$};
+    \draw[thick] (0,0,0) -- (0.72,0,0);
+    \draw[thick,->] (3.72,0,0) -- (5,0,0) node[anchor=north east]{$x$};
     \draw[thick,->] (0,0,0) -- (0,5,0) node[anchor=north west]{$y$};
     \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
 
-    \draw[thin,->,blue] (0,0.5,0) -- (2,0.5,0);
+    \draw[thin,blue] (0,0.5,0) -- (0.72,0.5,0);
     \draw[thin,->,blue] (4,0.5,0) -- (5,0.5,0);
-    \draw[thin,->,blue] (0,1,0) -- (2,1,0);
+    \draw[thin,blue] (0,1,0) -- (1.72,1,0);
     \draw[thin,->,blue] (4,1,0) -- (5,1,0);
     \draw[thin,->,blue] (0,1.5,0) -- (5,1.5,0);
     \draw[thin,->,blue] (0,2,0) -- (5,2,0);
     \draw[thin,->,blue] (0,2.5,0) -- (5,2.5,0);
     \draw[thin,->,blue] (0,3,0) -- (5,3,0);
+    \draw[thin,->,blue] (0,3.5,0) -- (5,3.5,0);
+    \draw[thin,->,blue] (0,4,0) -- (5,4,0);
+    \draw[thin,->,blue] (0,4.5,0) -- (5,4.5,0);
+
+    \draw[thick,->,red] (3,1.1,0.25) -- (3,2,0.25) node[anchor=north east]{$\vec{v}$};
+
+    \draw[thin,->,gray](3, 3, 2) node[anchor=west]{Wooden Block} .. controls (3, 1, 2) .. (3,0.7,1);
     \pgfmathsetmacro{\a}{4}
     \pgfmathsetmacro{\b}{0.1}
     \pgfmathsetmacro{\c}{0}
