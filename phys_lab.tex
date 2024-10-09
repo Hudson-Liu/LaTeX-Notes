@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[left=3cm,right=3cm,top=0cm,bottom=2cm]{geometry}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{physics}
@@ -14,21 +14,35 @@
 
 \title{Measuring the Acceleration of a Sliding Wood Block \protect\\ Using 1D Kinematics}
 \author{Hudson Liu}
-\date{Sep. 23, 2024}
+\date{Oct. 6, 2024}
 
 \begin{document}
 \maketitle
 \begin{abstract}
 \lipsum[1]
 \end{abstract}
-\section*{Hola}
-jweioafjoiejofaje
+\section{Introduction}
 
+The objective of this experiment was to find the magnitude of the accelerate of a wood block sliding on a gym floor. Furthermore, using this acceleration, we calculated the distance that a block would travel for any given initial velocity. Note that this experiment is contingent on the assumption that the acceleration of this block is constant; our methodology and results are not applicable to any situation where this may not be the case.
+\newline\newline
+To determine the acceleration, we needed to find the relationship between the amount of time that the block traveled for, and the distance that it traveled. To gather data, we pushed the wooden block across the gym floor, and measured both the distance traveled and the wall-clock time elapsed. The harder the block was pushed, the greater the magnitude of the initial velocity, and thus the block would travel further and longer. The acceleration between trials would remain constant, meaning that we could perform these trials multiple times and use the aggregated data to determine acceleration. The distance of the wood block was measured in units of planks on the gym floor (Figure 1).
+\newline\newline
+In order to use the data that we collected to find acceleration, we utilized the governing equation of this experiment:
+\[
+    \frac{-2 \Delta x}{t^2}=a
+\]
+Where $t$ is time measured in seconds, $\Delta x$ is the distance traveled measured in units of planks, and $a$ is acceleration ($\frac{planks}{s^2}$). This equation directly relates distance and time, our two known values, to acceleration, the quantity that we are attempting to determine. The full derivation of this equation from the 1D Kinematics equations is outlined in Section 3.
+\newline\newline
+Data analysis was performed using Google Sheets' built-in plotting \& linear regression features.
+
+\Section{Materials \& Procedure}
 \tdplotsetmaincoords{70}{110}
+\begin{figure}
+\centering
 \begin{tikzpicture}[tdplot_main_coords]
     \draw[thick] (0,0,0) -- (0.72,0,0);
-    \draw[thick,->] (3.72,0,0) -- (5,0,0) node[anchor=north east]{$x$};
-    \draw[thick,->] (0,0,0) -- (0,5,0) node[anchor=north west]{$y$};
+    \draw[thick,->] (3.72,0,0) -- (5,0,0) node[anchor=north east]{$y$};
+    \draw[thick,->] (0,0,0) -- (0,5,0) node[anchor=north west]{$x$};
     \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
 
     \draw[thin,blue] (0,0.5,0) -- (0.72,0.5,0);
@@ -59,6 +73,9 @@ jweioafjoiejofaje
     \draw (A)--(B) (G)--(F)--(B) (D)--(H) (A)--(E)--(F)--(G)--(H)--(E) (A)--(D);
     \draw [dashed,black] (B)--(C) (C)--(G) (C)--(D);
 \end{tikzpicture}
+\caption{A labeled diagram of the wooden block at $t=0$, where it has just been pushed. The block's velocity vector $\vec{v}$ is shown in red, and the gym floor's planks are shown as blue lines. The stopwatch for recording the time is not shown.}
+\end{figure}
+
 \def\arraystretch{1.2}%
 \begin{center}
     \begin{tabular}{c c}
@@ -132,5 +149,10 @@ jweioafjoiejofaje
         \end{tabular}
     \end{tabular}
 \end{center}
+
+\section{Acknowledgements}
+I would like to commend the contributions made by my lab partner, Jackson Heether, for his invaluable help in collecting data. Additionally, this lab would not be possible without the help of our teacher, Mr. William Kahl. I extend my sincerest gratitudes towards the science department of the Gilman Upper School.
+
+\section{References}
 
 \end{document}
